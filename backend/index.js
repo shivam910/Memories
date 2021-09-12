@@ -16,7 +16,7 @@ app.use(cors());
 // app.use('/posts', postRoutes);
 
 const CONNECTION_URL =
-"mongodb+srv://shivam910:mongo1121025@cluster0.tg51i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+"mongodb+srv://shivam910:@cluster0.tg51i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
   // "mongodb+srv://shivam910:@cluster0.tg51i.mongodb.net/example?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
 
