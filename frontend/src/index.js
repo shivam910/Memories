@@ -4,8 +4,15 @@ import {Provider} from "react-redux"
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import App from "./App";
-import reducers from "./reducers"
+import reducers from "./reducers";
 
 // Tp set redux we 1st have to create store
 const store = createStore(reducers, compose(applyMiddleware(thunk)))
-ReactDOM.render(<App />, document.getElementById("root"));
+
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById("root")
+    );

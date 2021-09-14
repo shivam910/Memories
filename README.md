@@ -4,6 +4,7 @@
 2. moment: for time and date
 3. react-file-base64 : for converting images
 4. redux redux-thunk : for async action using redux
+5. react-redux
 
 <!-- Backend Dependencies -->
 1. body-parser
