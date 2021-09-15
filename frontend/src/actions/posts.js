@@ -20,3 +20,13 @@ export const getPosts = () => async (dispatch) => {
 
 // We are working with asynchronus data to actually fetch all the posts sometime it gonna have to pass and for this we have to use redux thunk
 // Redux thunk allows us to in hear speacify an additional arrow function
+
+export const createPost = (post) =>async (dispatch) =>{
+    try {
+        const {data} = await api.createPost(post);
+        dispatch({type:'CREATE', 
+                  payload: data})
+    } catch (error) {
+        console.log(error.message)
+    }
+};
