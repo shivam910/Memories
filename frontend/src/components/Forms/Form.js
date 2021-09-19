@@ -18,7 +18,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createPost(postData));
-  };
+  };  
   const clear = () => {};
   return (
     <Paper className={classes.paper}>
@@ -65,14 +65,14 @@ const Form = () => {
           value={postData.tags}
           onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
         />
-        <div className={classes.fileInput}></div>
+        <div className={classes.fileInput}>
         <FileBase
           type="file"
           multiple={false}
-          onDone={(base64) =>
+          onDone={({base64}) =>
             setPostData({ ...postData, selectedFile: base64 })
           }
-        />
+        /></div>
       </form>
       <br />
       <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
